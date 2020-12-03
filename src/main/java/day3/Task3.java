@@ -14,5 +14,6 @@ public class Task3 {
             }
             System.out.println(dividend / divider);
         }
+        scan.close();
     }
 }

@@ -11,5 +11,6 @@ public class Task2 {
         if (divider == 0) break;
             System.out.println(dividend / divider);
         }
+        scan.close();
     }
 }
