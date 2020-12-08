@@ -6,9 +6,8 @@ public class Task1 {
         Motorbike bike = new Motorbike(1980, "black", "Yamaha");
         car.setYear(1980);
         car.info();
-        car.yearDiffirent(1945);
+        System.out.println("Разница между введенным годом и годом производства автомобиля - " + car.yearDiffirent(1945));
         bike.info();
-        bike.yearDiffirent(1965);
+        System.out.println("Разница между введенным годом и годом производства мотоцикла - " + bike.yearDiffirent(1965));
     }
-
 }

@@ -41,12 +41,11 @@ public class Car {
         return model;
     }
 
-    public void yearDiffirent(int inputYear){
-        System.out.println("Разница между переданным годом и годом выпуска автомобиля составляет: " + "\n"
-                + Math.abs((year - inputYear)) + " лет.");
-
+    public int yearDiffirent(int inputYear) {
+        return Math.abs((year - inputYear));
     }
-    public void info(){
+
+    public void info() {
         System.out.println("Это автомобиль");
     }
 
