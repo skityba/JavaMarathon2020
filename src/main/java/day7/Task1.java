@@ -1,7 +1,5 @@
 package day7;
 
-import static day7.Airplaine.compareAirplaines;
-
 public class Task1 {
 
     public static void main(String[] args) {
