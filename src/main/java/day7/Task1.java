@@ -8,7 +8,7 @@ public class Task1 {
         Airplaine aircraft = new Airplaine("Fokker", 1999, 15, 20, 0);
         Airplaine airship = new Airplaine("Boeing", 2005, 54, 60, 2);
 
-        compareAirplaines(aircraft, airship);
+        Airplaine.compareAirplaines(aircraft, airship);
     }
 
 }

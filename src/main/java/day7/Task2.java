@@ -19,27 +19,33 @@ public class Task2 {
         Player player6 = new Player(arr[5]);
 
         player1.run();
-        player1.info();
+        Player.info();
+        player1.run();
+        Player.info();
+        player1.run();
+        Player.info();
+        player1.run();
+        Player.info();
 
-        player2.run();
-        player2.info();
-
-        player3.run();
-        player3.info();
-
-        player4.run();
-        player4.info();
-
-        player5.run();
-        player5.info();
-
-        player6.run();
-        player6.info();
-
-
-        for (int i = 0; player1.getStamina() > 0; i++) {
-            player1.run();
-            player1.info();
-        }
+//        player2.run();
+//        player2.info();
+//
+//        player3.run();
+//        player3.info();
+//
+//        player4.run();
+//        player4.info();
+//
+//        player5.run();
+//        player5.info();
+//
+//        player6.run();
+//        player6.info();
+//
+//
+//        for (int i = 0; player1.getStamina() > 0; i++) {
+//            player1.run();
+//            player1.info();
+//        }
     }
 }

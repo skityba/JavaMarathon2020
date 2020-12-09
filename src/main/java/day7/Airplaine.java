@@ -55,11 +55,18 @@ public class Airplaine {
                 + " длина: " + length + " , вес: " + weight + " ,"
                 + " количество топлива в баке: " + fuel);
     }
-    public static void compareAirplaines(Airplaine a, Airplaine b) {
-        if(a.length > b.length){
-            System.out.println("Длина самолета aircraft больше длины самолета airship");
+//    public static void compareAirplaines(Airplaine a, Airplaine b) {
+//        if(a.length > b.length){
+//            System.out.println("Длина самолета " + a.producer + " больше длины самолета " + b.producer);
+//        }else{
+//            System.out.println("Длина самолета " + b.producer + " больше длины самолета " + a.producer);
+//        }
+//    }
+    public static void compareAirplaines(Airplaine aircraft, Airplaine airship) {
+        if(aircraft.getLength() > airship.getLength()){
+            System.out.println("Длина самолета " + aircraft.producer + " больше длины самолета " + airship.producer);
         }else{
-            System.out.println("Длина самолета airship больше длины самолета aircraft");
+            System.out.println("Длина самолета " + airship.producer + " больше длины самолета " + aircraft.producer);
         }
     }
 }
