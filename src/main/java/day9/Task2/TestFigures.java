@@ -19,23 +19,22 @@ public class TestFigures {
     }
 
     public static double calculateRedPerimeter(Figure[] figures) {
-            double k = 0;
+            double sumPerimeter = 0.0;
             for (Figure figure : figures) {
-                if (figure.getColor() == "Red") {
-                    k += figure.perimeter();
+                if (figure.getColor().equals("Red")) {
+                    sumPerimeter += figure.perimeter();
                 }
             }
-        return k;
+        return sumPerimeter;
     }
 
     public static double calculateRedArea(Figure[] figures) {
-        double k = 0;
-
+        double sumArea = 0.0;
             for (Figure figure : figures) {
-                if (figure.getColor() == "Red") {
-                    k += figure.area();
+                if (figure.getColor().equals("Red")) {
+                    sumArea += figure.area();
                 }
             }
-        return k;
+        return sumArea;
     }
 }
