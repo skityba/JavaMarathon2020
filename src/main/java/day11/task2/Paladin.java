@@ -1,9 +1,10 @@
 package day11.task2;
 
 public class Paladin extends Hero implements Healer, PhysAttack {
+    private double healSelf;
+    private double healTeam;
 
     public Paladin() {
-        health = 100.0;
         physDef = 50.0;
         magicDef = 20.0;
         physAtt = 15.0;
@@ -55,14 +56,6 @@ public class Paladin extends Hero implements Healer, PhysAttack {
         hero.health += healTeam;
         if (hero.health > MAXHEALTH) {
             hero.health = MAXHEALTH;
-        }
-        System.out.println(hero);
-    }
-
-    public void physicalAttack(Hero hero) {
-        hero.health = hero.health - (physAtt - (physAtt * hero.physDef / 100.0));
-        if (hero.health < MINHEALTH) {
-            hero.health = MINHEALTH;
         }
         System.out.println(hero);
     }

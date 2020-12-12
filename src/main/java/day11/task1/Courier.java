@@ -4,6 +4,7 @@ public class Courier implements Worker {
     private int salary;
     private boolean isPlayed;
     private Warehouse warehouse;
+    private String bonusResult = null;
 
     public Courier(int salary, boolean isPlayed, Warehouse warehouse) {
         this.salary = salary;
@@ -31,23 +32,20 @@ public class Courier implements Worker {
     public String toString() {
 
         if (warehouse.getCountDeliveredOrders() > 10000 && warehouse.getCountDeliveredOrders() % 10000 == 0) {
-            return "Общий заработок курьера " + salary +
-                    ", бонус уже был выплачен" +
-                    ", развезено заказов " + warehouse.getCountDeliveredOrders();
+                    bonusResult = ", бонус уже был выплачен";
         } else if (warehouse.getCountDeliveredOrders() >= 10000) {
-            return "Общий заработок курьера " + salary +
-                    ", бонус начислен " +
-                    ", развезено заказов " + warehouse.getCountDeliveredOrders();
+                    bonusResult = ", бонус начислен ";
         } else {
-            return "Общий заработок курьера " + salary +
-                    ", бонус пока недоступен" +
-                    ", развезено заказов " + warehouse.getCountDeliveredOrders();
+                    bonusResult = ", бонус пока недоступен";
         }
+        return "Общий заработок курьера " + salary +
+                bonusResult +
+                ", развезено заказов " + warehouse.getCountDeliveredOrders();
     }
 
     public void doWork() {
         salary += SALARYOFCOURIER;
-        warehouse.setCountDeliveredOrders(salary / SALARYOFCOURIER);
+        warehouse.setCountDeliveredOrders(warehouse.getCountDeliveredOrders() + 1);//(salary / SALARYOFCOURIER);
     }
 
     public void bonus() {

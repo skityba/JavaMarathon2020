@@ -1,9 +1,11 @@
 package day11.task2;
 
 public class Shaman extends Hero implements Healer, PhysAttack, MagicAttack {
+    private double healSelf;
+    private double healTeam;
+    private double magicAtt;
 
     public Shaman() {
-        health = 100.0;
         physDef = 20.0;
         magicDef = 20.0;
         physAtt = 10.0;
@@ -64,14 +66,6 @@ public class Shaman extends Hero implements Healer, PhysAttack, MagicAttack {
         hero.health += healTeam;
         if (hero.health > MAXHEALTH) {
             hero.health = MAXHEALTH;
-        }
-        System.out.println(hero);
-    }
-
-    public void physicalAttack(Hero hero) {
-        hero.health = hero.health - (physAtt - (physAtt * hero.physDef / 100.0));
-        if (hero.health < MINHEALTH) {
-            hero.health = MINHEALTH;
         }
         System.out.println(hero);
     }
