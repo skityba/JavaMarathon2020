@@ -47,12 +47,13 @@ public class MusicBand {
     }
 
     public static void transferMembers(MusicBand musicBands, MusicBand musicBands1) {
-        musicBands.getMusicians().get(0);
-        musicBands.getMusicians().get(1);
-        musicBands1.musicians.add(musicBands.getMusicians().get(0));
-        musicBands1.musicians.add(musicBands.getMusicians().get(1));
-        musicBands.musicians.remove(1);
-        musicBands.musicians.remove(0);
+        musicBands.getMusicians();
+        for (int i = 0; i < musicBands.getMusicians().size(); i++) {
+            musicBands1.musicians.add(musicBands1.getMusicians().size(), musicBands.getMusicians().get(i));
+        }
+        for(int i = musicBands.getMusicians().size() - 1;i >= 0; i--) {
+            musicBands.musicians.remove(i);
+        }
     }
 
     public static void getMembers(List<String> musicians, List<String> musicians1) {

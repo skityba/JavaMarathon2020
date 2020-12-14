@@ -26,17 +26,19 @@ public class Task3 {
         System.out.println(musicBands);
 
         groupsAfter2000(musicBands);
-
-        System.out.println(musicBands);
     }
 
     public static List<MusicBand> groupsAfter2000(List<MusicBand> bands) {
-        for (int i = bands.size() - 1; i >= 0; i--) {
+        List<MusicBand> newBands = new ArrayList<>();
+
+        for (int i = 0; i < bands.size(); i++) {
             int yearOfBand = bands.get(i).getYear();
-            if (yearOfBand < 2000) {
-                bands.remove(i);
+            if (yearOfBand > 2000) {
+                //newBands.add(new MusicBand(bands.get(i).getName(), yearOfBand));
+                newBands.add(bands.get(i));
             }
         }
-        return bands;
+        System.out.println(newBands);
+        return newBands;
     }
 }

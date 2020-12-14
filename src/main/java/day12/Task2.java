@@ -7,10 +7,7 @@ public class Task2 {
         ArrayList<Integer> arrList = new ArrayList<Integer>();
 
         for (int i = 0; i <= 350; i++) {
-            if (i % 2 == 0 && i <= 30) {
-                arrList.add(i);
-            }
-            if (i % 2 == 0 && i >= 300) {
+            if ((i % 2 == 0) && ((i > 0 && i <= 30) || (i >= 300))) {
                 arrList.add(i);
             }
         }
