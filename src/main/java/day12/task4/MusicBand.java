@@ -1,5 +1,6 @@
 package day12.task4;
 
+import java.util.Collection;
 import java.util.List;
 
 public class MusicBand {
@@ -47,13 +48,8 @@ public class MusicBand {
     }
 
     public static void transferMembers(MusicBand musicBands, MusicBand musicBands1) {
-        musicBands.getMusicians();
-        for (int i = 0; i < musicBands.getMusicians().size(); i++) {
-            musicBands1.musicians.add(musicBands1.getMusicians().size(), musicBands.getMusicians().get(i));
-        }
-        for(int i = musicBands.getMusicians().size() - 1;i >= 0; i--) {
-            musicBands.musicians.remove(i);
-        }
+        musicBands1.getMusicians().addAll(musicBands.getMusicians());
+        musicBands.getMusicians().removeAll(musicBands.getMusicians());
     }
 
     public static void getMembers(List<String> musicians, List<String> musicians1) {
