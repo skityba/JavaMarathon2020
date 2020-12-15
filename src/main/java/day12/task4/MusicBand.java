@@ -49,7 +49,8 @@ public class MusicBand {
 
     public static void transferMembers(MusicBand musicBands, MusicBand musicBands1) {
         musicBands1.getMusicians().addAll(musicBands.getMusicians());
-        musicBands.getMusicians().removeAll(musicBands.getMusicians());
+        //musicBands.getMusicians().removeAll(musicBands.getMusicians());
+        musicBands.getMusicians().clear();
     }
 
     public static void getMembers(List<String> musicians, List<String> musicians1) {
