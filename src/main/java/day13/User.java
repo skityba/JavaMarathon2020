@@ -21,7 +21,8 @@ public class User {
     }
 
     public void subscribe(User user) {
-        subscriptions.add(new User(user.getUsername()));
+        //subscriptions.add(new User(user.getUsername()));
+        subscriptions.add(user);
     }
 
     public boolean isSubscribed(User user) {
@@ -29,11 +30,11 @@ public class User {
     }
 
     public boolean isFriend(User user) {
-        return this.isSubscribed(user) && user.isSubscribed(User.this);
+        return this.isSubscribed(user) && user.isSubscribed(this);
     }
 
     public void sendMessage(User user, String text) {
-        MessageDatabase.addNewMessage(User.this, user, text);
+        MessageDatabase.addNewMessage(this, user, text);
     }
 
     public String toString() {
