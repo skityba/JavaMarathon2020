@@ -40,6 +40,7 @@ public class Task2 {
         } catch (IllegalArgumentException e) {
             System.out.println("Некорректный входной файл");
         }
+        scanner.close();
         System.out.println(list);
         return list;
     }

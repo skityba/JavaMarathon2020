@@ -48,6 +48,7 @@ public class Person {
         } catch (NoSuchElementException | NullPointerException e) {
             System.out.println("пустота");
         }
+            scanner.close();
             System.out.println(persons);
             return persons;
         }
