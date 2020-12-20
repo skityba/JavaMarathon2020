@@ -32,15 +32,13 @@ public class Task2 {
                     list.add(line3);
                 } else {
                     list = null;
-                    try {
-                        throw new IllegalArgumentException();
-                    } catch (IllegalArgumentException e) {
-                        System.out.println("Некорректный входной файл");
-                    }
+                    throw new IllegalArgumentException();
                 }
             }
-        } catch (NoSuchElementException e) {
-        } catch (NullPointerException e) {
+        } catch (NoSuchElementException | NullPointerException e) {
+            System.out.println("Пустота");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Некорректный входной файл");
         }
         System.out.println(list);
         return list;

@@ -21,7 +21,6 @@ public class Person {
     }
 
     public static List<Person> parseFileToObjList(File file) {
-        //Person person = new Person("line", 0);
         List<Person> persons = new ArrayList<>();
         Scanner scanner = null;
         try {
@@ -41,17 +40,16 @@ public class Person {
                     persons.add(person);
                 } else {
                     persons = null;
-                    try {
-                        throw new IllegalArgumentException();
-                    } catch (IllegalArgumentException e) {
-                        System.out.println("Некорректный входной файл");
-                    }
+                    throw new IllegalArgumentException();
                 }
             }
-        } catch (NoSuchElementException e) {
-        } catch (NullPointerException e) {
+        } catch (IllegalArgumentException e) {
+            System.out.println("Некорректный входной файл");
+        } catch (NoSuchElementException | NullPointerException e) {
+            System.out.println("пустота");
         }
-        System.out.println(persons);
-        return persons;
+            System.out.println(persons);
+            return persons;
+        }
     }
-}
+
