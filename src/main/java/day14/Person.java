@@ -1,25 +1,34 @@
 package day14;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.*;
 
+public class Person {
+    private String name;
+    private int age;
 
-public class Task2 {
-    public static void main(String[] args) {
-        File file = new File("people.txt");
-        parseFileToStringList(file);
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
-    public static List<String> parseFileToStringList(File file) {
-        List<String> list = new ArrayList<>();
+    @Override
+    public String toString() {
+        return "{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
+    public static List<Person> parseFileToObjList(File file) {
+        //Person person = new Person("line", 0);
+        List<Person> persons = new ArrayList<>();
         Scanner scanner = null;
         try {
             scanner = new Scanner(file);
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
         }
-
         try {
             for (int i = 0; true; i++) {
 
@@ -28,10 +37,10 @@ public class Task2 {
                 int lineNew = Integer.parseInt(line2);
 
                 if (lineNew > 0) {
-                    String line3 = line + " " + line2;
-                    list.add(line3);
+                    Person person = new Person(line, lineNew);
+                    persons.add(person);
                 } else {
-                    list = null;
+                    persons = null;
                     try {
                         throw new IllegalArgumentException();
                     } catch (IllegalArgumentException e) {
@@ -42,7 +51,7 @@ public class Task2 {
         } catch (NoSuchElementException e) {
         } catch (NullPointerException e) {
         }
-        System.out.println(list);
-        return list;
+        System.out.println(persons);
+        return persons;
     }
 }
