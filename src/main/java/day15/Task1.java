@@ -27,9 +27,10 @@ public class Task1 {
             }
         } catch (NoSuchElementException e) {
             System.out.println("Строки закончились");
+        } finally {
+            scanner.close();
+            pw.close();
+            System.out.println(name);
         }
-        scanner.close();
-        pw.close();
-        System.out.println(name);
     }
 }

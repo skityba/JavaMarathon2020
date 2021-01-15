@@ -6,7 +6,7 @@ import java.util.*;
 public class Task1 {
 
     public static void main(String[] args) {
-        File file = new File("numbers1.txt");
+        File file = new File("numbers.txt");
         try {
             printSumDigits(file);
         } catch (NumberFormatException e ) {
