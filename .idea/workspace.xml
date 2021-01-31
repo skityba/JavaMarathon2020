@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da09e243-2e08-4248-9731-9f08d913d099" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/file1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/day17/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day17/ChessPiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/day17/Task2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day17/Task2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/D14T1_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/D14T1_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/D14T2_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/D14T2_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/D16T1_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/D16T2_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/D16T2_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day18/Task1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day18/Task1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/day18/Task1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/day18/Task1.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +48,13 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Task2 (1)">
-    <configuration name="Task1 (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day14.Task1" />
+  <component name="RunManager" selected="Application.Task1 (1)">
+    <configuration name="Task1 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day18.Task1" />
       <module name="JavaMarathon2020" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day14.*" />
+          <option name="PATTERN" value="day18.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Task1 (1)" />
         <item itemvalue="Application.Task2 (1)" />
         <item itemvalue="Application.Task1" />
         <item itemvalue="Application.Task3" />
         <item itemvalue="Application.Task2" />
-        <item itemvalue="Application.Task1 (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -159,7 +151,7 @@
       <workItem from="1611992109243" duration="15532000" />
       <workItem from="1612037593621" duration="402000" />
       <workItem from="1612038026250" duration="657000" />
-      <workItem from="1612086748635" duration="2556000" />
+      <workItem from="1612086748635" duration="8414000" />
     </task>
     <servers />
   </component>
